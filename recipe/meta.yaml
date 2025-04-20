@@ -1,5 +1,5 @@
 {% set name = "rip2" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/MilesCranmer/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 466d2931c6437669d36326bbc9e0532c5b99fbf262e3b409adfbbdae3c7971f9
+  sha256: e6d3143958b838ebbf421fb933d8e46ecc28c8298f435bdf09f647b4def452f6
 
 build:
   number: 0
