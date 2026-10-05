@@ -11,6 +11,10 @@ Summary: A safe and ergonomic alternative to rm
 
 Development: https://github.com/MilesCranmer/rip2
 
+rip is a rust-based rm with a focus on safety, ergonomics, and performance.
+It favors a simple interface, and does not implement the xdg-trash spec or
+attempt to achieve the same goals
+
 Current build status
 ====================
 
