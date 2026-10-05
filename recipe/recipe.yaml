@@ -1,0 +1,42 @@
+schema_version: 1
+
+context:
+  name: rip2
+  version: "0.9.7"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/MilesCranmer/${{ name }}/archive/v${{ version }}.tar.gz
+  sha256: 8f3dbd77775e4b632e99eff6cd3b0ac4e9f886d7e879d8648484cf3e7d0e0cee
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - ${{ stdlib('c') }}
+    - ${{ compiler('c') }}
+    - ${{ compiler('rust') }}
+    - cargo-bundle-licenses
+
+tests:
+  - script:
+      - rip --version
+
+about:
+  summary: A safe and ergonomic alternative to rm
+  description: |
+    rip is a rust-based rm with a focus on safety, ergonomics, and performance.
+    It favors a simple interface, and does not implement the xdg-trash spec or
+    attempt to achieve the same goals
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  homepage: https://github.com/MilesCranmer/rip2
+  repository: https://github.com/MilesCranmer/rip2
+
+extra:
+  recipe-maintainers:
+    - apcamargo
